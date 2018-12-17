@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team Flow</title>
+    <link rel="icon" type="image/png" href="images/fav.png" />
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <!-- Main Navbar -->
+    <header class="c-header u-vertical-center">
+        <div class="wrapper">
+            <a href="#"  class="logo">
+                <img src="images/Logotype.svg" alt="Team Flow">
+            </a>
+            <form action="#" class="search-box">
+                <input type="text" class="o-rounded" placeholder="rechercher">
+            </form>
+            <div class="c-select c-add-btn ">
+                <a href="#" class="c-select__launcher o-rounded u-vertical-center"><span class="plus">+</span><span class="selection">ajouter</span> </a>
+                <ul class="c-select__options">
+                    <li data-value="option1" class="c-select__option">projet</li>
+                    <li data-value="option2" class="c-select__option">client</li>
+                    <li data-value="option3" class="c-select__option">employé</li>
+                    <li data-value="option4" class="c-select__option">réunion</li>
+                </ul>
+            </div>
+
+            <div class="u-vertical-center">
+                <div class="c-notifications">
+                    <a href="" class="c-notifications__bell lister" data-target="c-notifications__box"></a>
+                    <div class="c-notifications__bubble u-vertical-center">3</div>
+                    <ul class="c-notifications__box o-card js-dropdown">
+                        <li class="heading">Vous avez 3 notifications non lus</li>
+                        <li class="notification">
+                            <a href="">
+                                <p class="notification__message">X à terminé sa tache avec succés</p>
+                                <p class="notification__time">Il y a 5 minutes</p>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="">
+                                <p class="notification__message">X à terminé sa tache avec succés</p>
+                                <p class="notification__time">Il y a 5 minutes</p>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="">
+                                <p class="notification__message">X à terminé sa tache avec succés</p>
+                                <p class="notification__time">Il y a 5 minutes</p>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="">
+                                <p class="see-all">afficher tout</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="c-user">
+                    <img src="images/imen.jpg" alt="" class="c-user__avatar">
+                    <a href="" class="lister c-user__lister" data-target="c-user__options"></a>
+                    <ul class="c-user__options js-dropdown o-card">
+                        <li><a href="">profil</a></li>
+                        <li><a href="">déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Start Sidebar -->
+        <aside class="c-sidebar condensed">
+            <button class="expand u-vertical-center"></button>
+            <nav class="c-menu">
+                <a href="#statistics" class="c-menu__link c-menu__link--active">
+                    <img src="images/Stats.svg">statistiques
+                </a>
+                <a href="#employees" class="c-menu__link">
+                    <img src="images/Employees.svg">employés
+                </a>
+                <a href="#projects" class="c-menu__link">
+                    <img src="images/Projects.svg">projets
+                </a>
+                <a href="#meetings" class="c-menu__link">
+                    <img src="images/Meetings.svg">réunions
+                </a>
+                <a href="#clients" class="c-menu__link">
+                    <img src="images/Clients.svg">clients
+                </a>
+
+                <a href="#notifications" class="c-menu__link">
+                    <img src="images/Bell-white.svg">notifications
+                </a>
+                <a href="#settings" class="c-menu__link">
+                    <img src="images/Settings.svg">paramètres
+                </a>
+            </nav>
+        </aside>
+        <!-- End Sidebar -->
+        
+        <article>
+           
+            <!-- Start Statistics -->
+            <section class="section stats active" id="statistics">
+                <!--<div class="section__heading u-vertical-center">
+                    <h5 class="section__title">statistiques</h5>
+                </div>-->
+                
+                <div class="stats__row stats__row--first">
+                    <div class="chart o-card">
+                        <canvas class="chart__meetings"></canvas>
+                    </div>  
+                    
+                    <div class="chart o-card">
+                        <canvas class="chart__projects"></canvas>
+                    </div>  
+                </div>
+                
+                <div class="stats__row stats__row--last o-card chart u-vertical-center">
+                    <canvas class="chart__projects--completed chart__doughnut"></canvas>
+                    <canvas class="chart__projects--progressing chart__doughnut"></canvas>
+                    <canvas class="chart__projects--pending chart__doughnut"></canvas>
+                </div>
+                
+            </section>
+            <!-- End Statistics -->
+            
+            <!-- Start Employees -->
+            <section class="section hidden" id="employees">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">employés (24)</h5>
+                    <div class="c-select">
+                        <a href="#" class="filter c-select__launcher o-rounded u-vertical-center"><span class="selection">tout</span> </a>
+                        <ul class="c-select__options">
+                            <li data-value="option0" class="c-select__option">option</li>
+                            <li data-value="option1" class="c-select__option">option</li>
+                            <li data-value="option2" class="c-select__option">option</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="employees">
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/amira.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">amira rouissi</h3>
+                        <p class="c-employee__function">chef de projet</p>
+                        <p class="c-employee__email">amira.rouissi@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/walid.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">walid tanazefti</h3>
+                        <p class="c-employee__function">web designer</p>
+                        <p class="c-employee__email">walid.tanazefti@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/imen.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">imen bouallegue</h3>
+                        <p class="c-employee__function">web designer</p>
+                        <p class="c-employee__email">bouallegue.imen@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/orjouen.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">orjouen issaoui</h3>
+                        <p class="c-employee__function">rédactrice</p>
+                        <p class="c-employee__email">issaoui.orjouen@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/hamza.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">hamza ben abdesselem</h3>
+                        <p class="c-employee__function">marketeur</p>
+                        <p class="c-employee__email">hamza.abdesselem@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/amira.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">amira rouissi</h3>
+                        <p class="c-employee__function">chef de projet</p>
+                        <p class="c-employee__email">amira.rouissi@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/walid.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">walid tanazefti</h3>
+                        <p class="c-employee__function">web designer</p>
+                        <p class="c-employee__email">walid.tanazefti@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/imen.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">imen bouallegue</h3>
+                        <p class="c-employee__function">web designer</p>
+                        <p class="c-employee__email">bouallegue.imen@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/orjouen.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">orjouen issaoui</h3>
+                        <p class="c-employee__function">rédactrice</p>
+                        <p class="c-employee__email">issaoui.orjouen@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+
+                    <div class="o-card c-employee u-vertical-center">
+                        <img src="images/hamza.jpg" alt="" class="c-employee__image">
+                        <h3 class="c-employee__name">hamza ben abdesselem</h3>
+                        <p class="c-employee__function">marketeur</p>
+                        <p class="c-employee__email">hamza.abdesselem@gmail.com</p>
+                        <a href="" class="o-rounded u-vertical-center c-employee__profile-link">voir profile</a>
+                    </div>
+                </div>
+            </section>
+            <!-- End Employees -->
+            
+            <!-- Start Projects -->
+            <section class="section hidden" id="projects">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">Projets (24)</h5>
+                    <div class="c-select">
+                        <a href="#" class="filter c-select__launcher o-rounded u-vertical-center"><span class="selection">tout</span> </a>
+                        <ul class="c-select__options">
+                            <li data-value="option0" class="c-select__option">tout</li>
+                            <li data-value="option1" class="c-select__option">aboutis</li>
+                            <li data-value="option2" class="c-select__option">en cours</li>
+                            <li data-value="option3" class="c-select__option">annulé</li>
+                            <li data-value="option4" class="c-select__option">en attente</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="projects">
+                    <div class="projects__row">
+                        <div class="c-project o-card">
+                            <div class="c-project__heading">
+                                <h4>application web</h4>
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="c-project__deadline u-vertical-center">
+                                <span class="u-vertical-center">Durée : 2 semaines</span>
+                                <span>- à faire</span>
+                            </div>
+                            <div class="c-project__owner">
+                                <img src="https://via.placeholder.com/50" alt="avatar" class="image">
+                                <div>
+                                    <p class="name">mohammed youssfi</p>
+                                    <p class="description">chef de projet</p>
+                                </div>
+                            </div>
+                            <div class="c-project__budget">
+                                <p>8000 DT</p>
+                            </div>
+                            <hr>
+                            <div class="c-project__info">
+                                <a href="#" class="team">équipe (12)</a>
+                                <a href="#" class="payment">reglement</a>
+                                <a href="#" class="advancement">avancement</a>
+                            </div>
+                        </div>
+                        <div class="c-project o-card">
+                            <div class="c-project__heading">
+                                <h4>application web</h4>
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="c-project__deadline u-vertical-center">
+                                <span class="u-vertical-center">Durée : 2 semaines</span>
+                                <span>- à faire</span>
+                            </div>
+                            <div class="c-project__owner">
+                                <img src="https://via.placeholder.com/50" alt="avatar" class="image">
+                                <div>
+                                    <p class="name">mohammed youssfi</p>
+                                    <p class="description">chef de projet</p>
+                                </div>
+                            </div>
+                            <div class="c-project__budget">
+                                <p>8000 DT</p>
+                            </div>
+                            <hr>
+                            <div class="c-project__info">
+                                <a href="#" class="team">équipe (12)</a>
+                                <a href="#" class="payment">reglement</a>
+                                <a href="#" class="advancement">avancement</a>
+                            </div>
+                        </div>
+                        <div class="c-project o-card">
+                            <div class="c-project__heading">
+                                <h4>application web</h4>
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="c-project__deadline u-vertical-center">
+                                <span class="u-vertical-center">Durée : 2 semaines</span>
+                                <span>- à faire</span>
+                            </div>
+                            <div class="c-project__owner">
+                                <img src="https://via.placeholder.com/50" alt="avatar" class="image">
+                                <div>
+                                    <p class="name">mohammed youssfi</p>
+                                    <p class="description">chef de projet</p>
+                                </div>
+                            </div>
+                            <div class="c-project__budget">
+                                <p>8000 DT</p>
+                            </div>
+                            <hr>
+                            <div class="c-project__info">
+                                <a href="#" class="team">équipe (12)</a>
+                                <a href="#" class="payment">reglement</a>
+                                <a href="#" class="advancement">avancement</a>
+                            </div>
+                        </div>
+                        <div class="c-project o-card">
+                            <div class="c-project__heading">
+                                <h4>application web</h4>
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="c-project__deadline u-vertical-center">
+                                <span class="u-vertical-center">Durée : 2 semaines</span>
+                                <span>- à faire</span>
+                            </div>
+                            <div class="c-project__owner">
+                                <img src="https://via.placeholder.com/50" alt="avatar" class="image">
+                                <div>
+                                    <p class="name">mohammed youssfi</p>
+                                    <p class="description">chef de projet</p>
+                                </div>
+                            </div>
+                            <div class="c-project__budget">
+                                <p>8000 DT</p>
+                            </div>
+                            <hr>
+                            <div class="c-project__info">
+                                <a href="#" class="team">équipe (12)</a>
+                                <a href="#" class="payment">reglement</a>
+                                <a href="#" class="advancement">avancement</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects__row">
+                        <div class="c-project o-card">
+                            <div class="c-project__heading">
+                                <h4>application web</h4>
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="c-project__deadline u-vertical-center">
+                                <span class="u-vertical-center">Durée : 2 semaines</span>
+                                <span>- à faire</span>
+                            </div>
+                            <div class="c-project__owner">
+                                <img src="https://via.placeholder.com/50" alt="avatar" class="image">
+                                <div>
+                                    <p class="name">mohammed youssfi</p>
+                                    <p class="description">chef de projet</p>
+                                </div>
+                            </div>
+                            <div class="c-project__budget">
+                                <p>8000 DT</p>
+                            </div>
+                            <hr>
+                            <div class="c-project__info">
+                                <a href="#" class="team">équipe (12)</a>
+                                <a href="#" class="payment">reglement</a>
+                                <a href="#" class="advancement">avancement</a>
+                            </div>
+                        </div>
+                        <div class="c-project o-card">
+                            <div class="c-project__heading">
+                                <h4>application web</h4>
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="c-project__deadline u-vertical-center">
+                                <span class="u-vertical-center">Durée : 2 semaines</span>
+                                <span>- à faire</span>
+                            </div>
+                            <div class="c-project__owner">
+                                <img src="https://via.placeholder.com/50" alt="avatar" class="image">
+                                <div>
+                                    <p class="name">mohammed youssfi</p>
+                                    <p class="description">chef de projet</p>
+                                </div>
+                            </div>
+                            <div class="c-project__budget">
+                                <p>8000 DT</p>
+                            </div>
+                            <hr>
+                            <div class="c-project__info">
+                                <a href="#" class="team">équipe (12)</a>
+                                <a href="#" class="payment">reglement</a>
+                                <a href="#" class="advancement">avancement</a>
+                            </div>
+                        </div>
+                        <div class="c-project o-card">
+                            <div class="c-project__heading">
+                                <h4>application web</h4>
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="c-project__deadline u-vertical-center">
+                                <span class="u-vertical-center">Durée : 2 semaines</span>
+                                <span>- à faire</span>
+                            </div>
+                            <div class="c-project__owner">
+                                <img src="https://via.placeholder.com/50" alt="avatar" class="image">
+                                <div>
+                                    <p class="name">mohammed youssfi</p>
+                                    <p class="description">chef de projet</p>
+                                </div>
+                            </div>
+                            <div class="c-project__budget">
+                                <p>8000 DT</p>
+                            </div>
+                            <hr>
+                            <div class="c-project__info">
+                                <a href="#" class="team">équipe (12)</a>
+                                <a href="#" class="payment">reglement</a>
+                                <a href="#" class="advancement">avancement</a>
+                            </div>
+                        </div>
+                        <div class="c-project o-card">
+                            <div class="c-project__heading">
+                                <h4>application web</h4>
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="c-project__deadline u-vertical-center">
+                                <span class="u-vertical-center">Durée : 2 semaines</span>
+                                <span>- à faire</span>
+                            </div>
+                            <div class="c-project__owner">
+                                <img src="https://via.placeholder.com/50" alt="avatar" class="image">
+                                <div>
+                                    <p class="name">mohammed youssfi</p>
+                                    <p class="description">chef de projet</p>
+                                </div>
+                            </div>
+                            <div class="c-project__budget">
+                                <p>8000 DT</p>
+                            </div>
+                            <hr>
+                            <div class="c-project__info">
+                                <a href="#" class="team">équipe (12)</a>
+                                <a href="#" class="payment">reglement</a>
+                                <a href="#" class="advancement">avancement</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <nav class="c-pagination ">
+                    <a href="#" class="c-pagination__item u-vertical-center c-pagination__item--active">1</a>
+                    <a href="" class="c-pagination__item u-vertical-center">2</a>
+                    <a href="" class="c-pagination__item u-vertical-center">3</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">4</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">5</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">6</a>
+                </nav>
+            </section>
+            <!-- End Projects -->
+            
+            <!-- Start Meetings -->
+            <section class="section hidden" id="meetings">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">Réunions</h5>
+                </div>
+            </section>
+            <!-- End Meetings -->
+            
+            <!-- Start Clients -->
+            <section class="section hidden" id="clients">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">clients (128)</h5>
+                </div>
+
+                <ul class="c-clients">
+                    <li class="c-clients__item c-clients__item--first">
+                        <div class="customer">
+                            <p>client</p>
+                        </div>
+                        <div class="project">
+                            <p>projet</p>
+                        </div>
+                        <div class="payment">
+                            <p>reglement</p>
+                        </div>
+                        <div class="email">
+                            <p>adresse email</p>
+                        </div>
+                        <div class="phone">
+                            <p>telephone</p>
+                        </div>
+                        <div class="actions">
+                            <p>actions</p>
+                        </div>
+                    </li>
+
+                    <li class="c-clients__item o-card ">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>MF</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Mohamed fatnassi</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <p>teamflow</p>
+                        </div>
+                        <div class="payment">
+                            <p>Payé</p>
+                        </div>
+                        <div class="email">
+                            <p>Mohamed.fatnassi@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+                    <li class="c-clients__item o-card ">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>AA</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Achref Achour</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <p>teamflow</p>
+                        </div>
+                        <div class="payment">
+                            <p>Payé</p>
+                        </div>
+                        <div class="email">
+                            <p>Achref.achour@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+
+                    <li class="c-clients__item o-card ">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>IB</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Imen Bouallegue</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <p>teamflow</p>
+                        </div>
+                        <div class="payment">
+                            <p>Payé</p>
+                        </div>
+                        <div class="email">
+                            <p>Imen.bouallegue@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+                    <li class="c-clients__item o-card ">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>IB</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Walid Tanazefti</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <p>teamflow</p>
+                        </div>
+                        <div class="payment">
+                            <p>Payé</p>
+                        </div>
+                        <div class="email">
+                            <p>Walid.tanazefti@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+
+                    <li class="c-clients__item o-card">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>IB</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Dejla Aouini</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <p>teamflow</p>
+                        </div>
+                        <div class="payment">
+                            <p>Payé</p>
+                        </div>
+                        <div class="email">
+                            <p>Deja.aouini@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+
+                </ul>
+
+                <nav class="c-pagination ">
+                    <a href="#" class="c-pagination__item u-vertical-center c-pagination__item--active">1</a>
+                    <a href="" class="c-pagination__item u-vertical-center">2</a>
+                    <a href="" class="c-pagination__item u-vertical-center">3</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">4</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">5</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">6</a>
+                </nav>
+            </section>
+            <!-- End Clients -->
+
+            <!-- Start Notifications -->
+            <section class="section hidden" id="notifications">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">notifications</h5>
+                </div>
+            </section>
+            <!-- End Notifications -->  
+            
+            <!-- Start Settings -->
+            <section class="section hidden" id="settings">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">paramètres</h5>
+                </div>
+            </section>
+            <!-- End Settings -->
+            
+        </article>
+
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
