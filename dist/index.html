@@ -63,8 +63,8 @@
 
                 <div class="c-user">
                     <img src="images/imen.jpg" alt="" class="c-user__avatar">
-                    <a href="" class="lister c-user__lister" data-target="c-user__options"></a>
-                    <ul class="c-user__options js-dropdown o-card">
+                    <a href="" class="lister c-user__lister" data-target="#user-options"></a>
+                    <ul class="c-user__options js-dropdown o-card" id="user-options">
                         <li><a href="">profil</a></li>
                         <li><a href="">déconnexion</a></li>
                     </ul>
@@ -509,6 +509,115 @@
                 <div class="section__heading u-vertical-center">
                     <h5 class="section__title">Réunions</h5>
                 </div>
+                <div class="meetings">
+                    <div class="auto-jsCalendar o-card" data-navigator-position="right" data-language="fr"></div>
+                    <div class="c-planning today o-card">
+                       
+                        <div class="c-planning__heading">
+                            <h5 class="reminder">aujourd'hui 22 décembre</h5>
+                            <h5 class="number">(2 réunions)</h5>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options5"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options5">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options6"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options6">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="c-planning this-week o-card">
+                       
+                        <div class="c-planning__heading">
+                            <h5 class="reminder">cette semaine</h5>
+                            <h5 class="number">(12 réunions)</h5>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options7"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options7">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options1"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options1">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options2"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options2">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </section>
             <!-- End Meetings -->
             
@@ -713,10 +822,9 @@
             <!-- End Settings -->
             
         </article>
-
-
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="js/jsCalendar.js"></script>
     <script src="js/app.js"></script>
 </body>
 

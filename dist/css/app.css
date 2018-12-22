@@ -647,3 +647,172 @@ article {
 
 .stats .chart {
   padding: 1em; }
+
+.meetings {
+  display: flex;
+  flex-wrap: wrap; }
+  .meetings > * {
+    margin-right: 5px; }
+
+.c-planning {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1.5em;
+  width: 35%; }
+  .c-planning__heading {
+    display: flex;
+    text-transform: capitalize;
+    margin-bottom: 1.5em; }
+    .c-planning__heading .reminder {
+      margin: 0 10px 0 0;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #777; }
+    .c-planning__heading .number {
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 500; }
+  .c-planning .c-meeting {
+    position: relative;
+    text-transform: capitalize;
+    border-left: 3px solid #FF4677;
+    padding-left: 0.75em; }
+    .c-planning .c-meeting:not(:last-of-type) {
+      margin-bottom: 20px; }
+      .c-planning .c-meeting:not(:last-of-type)::before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: #eee;
+        bottom: -10px;
+        left: 0; }
+    .c-planning .c-meeting__options {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      right: 0;
+      top: 30px; }
+      .c-planning .c-meeting__options li {
+        padding: 0.5em; }
+        .c-planning .c-meeting__options li:hover {
+          background: #f5f5f5; }
+    .c-planning .c-meeting .lister {
+      height: 18px;
+      width: 5px;
+      display: block;
+      position: absolute;
+      right: 0;
+      background: url("../images/options.svg") center center no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+    .c-planning .c-meeting__name {
+      display: flex;
+      justify-content: space-between; }
+      .c-planning .c-meeting__name h4 {
+        margin: 0 0 5px;
+        font-size: 1.1rem;
+        font-weight: 500; }
+    .c-planning .c-meeting__client {
+      color: #777;
+      margin-bottom: 10px; }
+    .c-planning .c-meeting__details {
+      display: flex; }
+      .c-planning .c-meeting__details .time {
+        margin-right: 20px; }
+  .c-planning.this-week .c-meeting {
+    border-color: #5A01AB; }
+
+.jsCalendar {
+  margin-bottom: 20px;
+  padding: 1em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
+  .jsCalendar table {
+    border: 0;
+    font-family: Tahoma,Geneva,sans-serif;
+    border-collapse: collapse; }
+    .jsCalendar table td, .jsCalendar table th {
+      border: 0; }
+  .jsCalendar thead .jsCalendar-title {
+    height: 40px;
+    line-height: 40px; }
+  .jsCalendar thead .jsCalendar-title-left {
+    float: left; }
+  .jsCalendar thead .jsCalendar-title-right {
+    float: right; }
+  .jsCalendar thead .jsCalendar-nav-left, .jsCalendar thead .jsCalendar-nav-right {
+    border-radius: 10px;
+    color: #999;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: "Courier New",Courier,monospace;
+    height: 20px;
+    line-height: 20px;
+    margin: 10px 8px;
+    text-align: center;
+    transition: color .2s,background-color .2s;
+    width: 20px; }
+  .jsCalendar thead .jsCalendar-nav-left:hover, .jsCalendar thead .jsCalendar-nav-right:hover {
+    background-color: #e2e2e2;
+    color: #000; }
+  .jsCalendar thead .jsCalendar-nav-left {
+    float: left; }
+  .jsCalendar thead .jsCalendar-nav-right {
+    float: right; }
+  .jsCalendar thead .jsCalendar-title-name {
+    cursor: default;
+    float: left;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 0 20px; }
+  .jsCalendar thead .jsCalendar-nav-left:after {
+    content: "<"; }
+  .jsCalendar thead .jsCalendar-nav-right:after {
+    content: ">"; }
+  .jsCalendar thead .jsCalendar-week-days th {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2); }
+  .jsCalendar tbody td, .jsCalendar thead .jsCalendar-week-days th {
+    border-radius: 18px;
+    cursor: default;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: lighter;
+    height: 36px;
+    line-height: 36px;
+    margin: 1px 2px;
+    text-align: center;
+    transition: color .1s,background-color .2s;
+    width: 36px; }
+  .jsCalendar tbody td:hover {
+    background-color: #e6e6e6; }
+  .jsCalendar tbody td.jsCalendar-selected {
+    background-color: #fff;
+    border: 2px solid #e6e6e6;
+    height: 32px;
+    line-height: 32px;
+    width: 32px; }
+  .jsCalendar tbody td.jsCalendar-current {
+    background-color: #AC3BFA;
+    border-radius: 18px;
+    color: #fff; }
+  .jsCalendar tbody td.jsCalendar-next, .jsCalendar tbody td.jsCalendar-previous {
+    color: #cacaca; }
+  .jsCalendar tbody td.jsCalendar-next:hover, .jsCalendar tbody td.jsCalendar-previous:hover {
+    color: #fff; }
+  .jsCalendar thead {
+    display: block;
+    margin: 4px 4px 0 4px; }
+  .jsCalendar tbody {
+    display: block;
+    margin: 0 4px 4px 4px; }
+  .jsCalendar ::-moz-selection, .jsCalendar ::-moz-selection {
+    background: #83d8ff; }
+  .jsCalendar ::-moz-selection, .jsCalendar ::selection {
+    background: #83d8ff; }

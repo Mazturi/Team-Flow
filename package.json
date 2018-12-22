@@ -21,6 +21,7 @@
     "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
-    "chart.js": "^2.7.3"
+    "chart.js": "^2.7.3",
+    "gulp-clean-css": "^4.0.0"
   }
 }

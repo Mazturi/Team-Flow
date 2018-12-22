@@ -7,14 +7,12 @@ for(let lister of listers) {
     
     lister.addEventListener('click', function(e) {
         e.preventDefault();
-        let target = document.querySelector('.' + this.getAttribute('data-target'));
+        let target = document.querySelector(this.getAttribute('data-target'));
         target.classList.toggle('is-open');
     });
 }
 
-
 // Close Dropdown on Document Click
-
 document.addEventListener('click', function(e) {
     if(document.querySelector('.is-open') && !e.target.classList.contains('lister')) {
         document.querySelector('.is-open').classList.remove('is-open');
@@ -22,7 +20,6 @@ document.addEventListener('click', function(e) {
 });
 
 // Sidebar Navigation
-
 let links = document.querySelectorAll('.c-menu__link');
 
 for (let link of links) {
@@ -271,3 +268,59 @@ let pendingProjects = new Chart(pendingProjectsChart,{
         cutoutPercentage: 75,
     }
 });
+
+
+// French traduction for jsCalendar
+
+(function(){
+
+    // Get library
+    var jsCalendar = window.jsCalendar;
+
+    // If jsCalendar is not loaded
+    if (typeof jsCalendar === 'undefined') {
+        // If there is no language to load array
+        if (typeof window.jsCalendar_language2load === 'undefined') {
+            window.jsCalendar_language2load = [];
+        }
+        // Wrapper to add language to load list
+        jsCalendar = {
+            addLanguage : function (language) {
+                // Add language to load list
+                window.jsCalendar_language2load.push(language);
+            }
+        };
+    }
+
+    // Add a new language
+    jsCalendar.addLanguage({
+        // Language code
+        code : 'fr',
+        // Months of the year
+        months : [
+            'Janvier',
+            'Février',
+            'Mars',
+            'Avril',
+            'Mai',
+            'Juin',
+            'Juillet',
+            'Août',
+            'Septembre',
+            'octobre',
+            'Novembre',
+            'Décembre'
+        ],
+        // Days of the week
+        days : [
+            'Dimanche',
+            'Lundi',
+            'Mardi',
+            'Mercredi',
+            'Jeudi',
+            'Vendredi',
+            'Samedi'
+        ]
+    });
+
+})();
