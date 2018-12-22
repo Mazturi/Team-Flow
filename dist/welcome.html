@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Team-Flow!</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <section class="welcome">
+        <div class="left">
+            <div class="features">
+                <h6>maintenir une bonne communication</h6>
+                <h6>construire des relations de travail positives</h6>
+                <h6>reconnaitre le bon travail</h6>
+            </div>
+            <img class="illustration" src="images/Welcome2.png" alt="">
+        </div>
+        <div class="right u-vertical-center">
+           <img src="images/Logotype.svg" class="logotype" alt="">
+            <div class="wrap">
+                <div class="usertype">
+                <h3 class="select-a-user">connecter en tant que:</h3>
+                    <a class="u-vertical-center usertype__selector usertype__selector--admin" href="" data-inner="administrateur">administrateur</a>
+                    <a class="selected u-vertical-center usertype__selector usertype__selector--employee" href="" data-inner="employé">employé</a>
+                    <a class="u-vertical-center usertype__selector usertype__selector--client" href="" data-inner="client">client</a>
+                </div>
+
+                <form action="#" class="login-form">
+                    <div class="id">
+                        <input type="text" class="o-rounded" placeholder="identifiant">
+                    </div>
+                    <div class="psw">
+                        <input type="password" class="o-rounded"  placeholder="mot de passe">
+                    </div>
+                    <a href="" class="forgot-psw">mot de passe oublié?</a>
+                    <a href="" class=" u-vertical-center connect">se connecter</a>
+                </form>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    <script>
+        let selectors = document.querySelectorAll('.usertype__selector');
+        
+        for (let selector of selectors) {
+            selector.addEventListener('click', function(e) {
+                e.preventDefault();
+                let elements = this.parentElement.children;
+                let i = 0;
+                for (let element of elements) {
+                    i++;
+                    setTimeout(function() {
+                        element.classList.add('translate');
+                    }, 100*i);
+                    element.addEventListener("webkitAnimationEnd", function() {
+                        element.style.display = "none";
+                    });
+                }
+                setTimeout(function() {
+                    document.querySelector('.usertype').style.display = "none";
+                    document.querySelector('.login-form').style.display = "flex";
+                    document.querySelector('.login-form').style.opacity = "1";
+                }, 700);
+            })
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,7 +1,5 @@
 // Toggle Dropdowns
-
 let listers = document.querySelectorAll('.lister');
-
 
 for(let lister of listers) {
     

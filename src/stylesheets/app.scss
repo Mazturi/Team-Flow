@@ -203,6 +203,17 @@ $pink: #FF4677;
     }
 }
 
+@keyframes translate{
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+}
+
 //***** Abstract & Common Classes *****/
 
 .o-card{
@@ -784,21 +795,20 @@ article{
 }
 
 
+/***** Meetings Section *****/
 
 .meetings{
     display: flex;
     flex-wrap: wrap;
     > * {
-        margin-right: 5px;
+        margin-right: 10px;
     }
 }
-
-
 
 .c-planning{
     height: fit-content;
     padding:  1.5em;
-    width: 35%;
+    width: 34%;
     &__heading{
         display: flex;
         text-transform: capitalize;
@@ -1000,4 +1010,201 @@ article{
   ::-moz-selection, ::selection {
     background: #83d8ff;
   }
+}
+
+/***** Welcome *****/
+
+.welcome{
+    display: flex;
+    height: 100vh;
+    background: #fff;
+    justify-content: space-between;
+    .left{
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        background: url('../images/Welcome1.svg');
+        background-size: cover;
+        .features{
+            padding: 2em;
+            margin-top: 70px;        
+            h6{
+                &::first-letter{
+                    text-transform: capitalize;
+                }
+                &::before{
+                    position: absolute;
+                    content: '';
+                    top: calc(50% - 12px);
+                    height: 25px;
+                    width: 25px;
+                    left: 0;
+                    background: url('../images/Verified.svg');
+                    background-size: cover;
+                }
+                padding-left: 35px;
+                position: relative;
+                color: #fff;
+                font-weight: 400;
+                font-size: 1rem;
+                margin: 0 0 25px;
+            }
+        }
+        .illustration{
+            margin: auto auto 80px;
+            width: 70%;
+        }
+    }
+}
+
+    .right{
+        width: 67%;
+        flex-direction: column;
+        justify-content: center;
+        .logotype{
+            width: 200px;
+            margin-bottom: 50px;
+          
+        }
+        .select-a-user{
+            font-weight: 500;
+            margin: 0 0 40px;
+            transition: opacity 1s ease-in-out;
+            text-align: center;
+                text-transform: uppercase;
+            &::first-letter{
+                text-transform: capitalize;
+            }
+        }
+
+        .wrap{
+            display: block;
+            overflow: hidden;
+            width: 260px;
+            /*background: grey;*/
+            min-height: 260px;
+        }
+        .usertype{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s ease-in-out;
+            &__selector{
+                &.translate{
+                    animation: translate 0.3s;
+                }
+                position: relative;
+                justify-content: center;
+                margin: 10px 0;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                height:48px;
+                background: transparent;
+                transition: all 0.3s ease-in-out;
+                &::before, &::after{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                }
+                &::before{
+                    content: '';
+                    transform: scaleX(0);
+                    transform-origin: left center;  
+                    transition: all 0.25s ease-in-out;
+                }
+                &::after{
+                    content: attr(data-inner);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &:hover{
+                    color: #fff;
+                    &::before{
+                        transform: scaleX(1);
+                    }
+                }
+                &--admin{
+                    &::before{
+                        background: $purple;
+                    }
+                    border: 1px solid $purple;
+                    color: $purple;
+                }
+                &--client{
+                    border: 1px solid $lavender;
+                    color: $lavender;
+                    &::before{
+                        background: $lavender;
+                    }
+                }
+                &--employee{
+                    border: 1px solid $pink;
+                    color: $pink;
+                    &::before{
+                        background: $pink;
+                    }
+                }
+                
+            }
+        }
+    }
+
+.login-form{
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in-out;
+    .psw, .id{
+        position: relative;
+        margin-top: 10px;
+        & input{
+            width: 100%;
+            border-radius: 0;
+            padding-left: 50px;
+            border: 1px solid #bdbdbd;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            height: 28px;
+            width: 28px;
+            top: calc(50% - 14px);
+            left: 15px;  
+        }
+    }
+    .psw{
+        &::before {
+            background: url('../images/Lock.svg') center center no-repeat;
+            background-size: 16px auto;
+        }
+    }
+    .id {
+        &::before {
+            background: url('../images/User.svg') center center no-repeat;
+            background-size: 16px auto;
+        } 
+    }
+    .forgot-psw{
+        color: $purple;
+        &::first-letter{
+            text-transform: capitalize;
+        }
+        font-size: 0.9rem;
+        align-self: flex-end;
+        margin: 10px 0 20px;
+        text-transform: lowercase;
+    }
+    .connect{
+        margin: auto;
+        height: 44px;
+
+        width: 100%;
+        text-transform: uppercase;
+        background: $lavender;
+        color: #fff;
+        justify-content: center;
+    }
 }
