@@ -1013,20 +1013,15 @@ article{
 }
 
 /***** Welcome *****/
-
-.welcome-body{
-    background: #f5f5f5;
-    padding: 3em 5em;
-}
-
 .welcome{
+    height: 100vh;
     display: flex;
     background: #fff;
     justify-content: space-between;
     .left{
         display: flex;
         flex-direction: column;
-        width: 42%;
+        width: 35%;
         background: url('../images/Welcome1.svg');
         background-size: cover;
         .features{
@@ -1055,14 +1050,14 @@ article{
             }
         }
         .illustration{
-            margin: auto auto 80px;
+            margin: auto auto 50px;
             width: 70%;
         }
     }
 }
 
     .right{
-        width: 58%;
+        width: 65%;
         flex-direction: column;
         justify-content: center;
         .logotype{
