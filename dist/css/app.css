@@ -14,7 +14,8 @@ html, body, ul, ol, p {
 
 body {
   font-family: 'Barlow', sans-serif;
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  position: relative; }
 
 ::-webkit-input-placeholder {
   text-transform: capitalize; }
@@ -40,8 +41,6 @@ button, input {
   outline: none;
   border: none; }
 
-/***** Global Classes *****/
-/***** Colors *****/
 /***** Dropdown *****/
 .js-dropdown {
   display: none;
@@ -839,15 +838,18 @@ article {
     background: #83d8ff; }
 
 /***** Welcome *****/
+.welcome-body {
+  background: #f5f5f5;
+  padding: 3em 5em; }
+
 .welcome {
   display: flex;
-  height: 100vh;
   background: #fff;
   justify-content: space-between; }
   .welcome .left {
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 42%;
     background: url("../images/Welcome1.svg");
     background-size: cover; }
     .welcome .left .features {
@@ -876,7 +878,7 @@ article {
       width: 70%; }
 
 .right {
-  width: 67%;
+  width: 58%;
   flex-direction: column;
   justify-content: center; }
   .right .logotype {
@@ -994,3 +996,119 @@ article {
     background: #AC3BFA;
     color: #fff;
     justify-content: center; }
+
+.modal {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.18);
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
+  .modal.hidden {
+    display: none; }
+    .modal.hidden .modal__content {
+      opacity: 0;
+      z-index: -1;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+      transition: all 0.3s ease-in-out; }
+  .modal__content {
+    max-height: 500px;
+    overflow-y: scroll;
+    position: relative;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1em 2em;
+    flex-direction: column; }
+    .modal__content::-webkit-scrollbar {
+      width: 8px; }
+    .modal__content::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: #d4d4d4; }
+  .modal__title {
+    text-transform: uppercase;
+    margin: 2em 0;
+    font-weight: 500; }
+  .modal__close {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background: url("../images/close.svg") center center no-repeat;
+    background-size: cover;
+    right: 0;
+    top: 0; }
+  .modal form {
+    width: 280px;
+    padding: 0 1.5em; }
+  .modal .field {
+    margin-bottom: 10px; }
+    .modal .field textarea, .modal .field input {
+      outline: none;
+      width: 100%; }
+      .modal .field textarea:focus, .modal .field input:focus {
+        box-shadow: 0 0 4px rgba(90, 1, 171, 0.1);
+        border-color: #5A01AB; }
+        .modal .field textarea:focus::-webkit-input-placeholder, .modal .field input:focus::-webkit-input-placeholder {
+          color: #5A01AB; }
+        .modal .field textarea:focus:-ms-input-placeholder, .modal .field input:focus:-ms-input-placeholder {
+          color: #5A01AB; }
+        .modal .field textarea:focus::-ms-input-placeholder, .modal .field input:focus::-ms-input-placeholder {
+          color: #5A01AB; }
+        .modal .field textarea:focus::placeholder, .modal .field input:focus::placeholder {
+          color: #5A01AB; }
+    .modal .field textarea {
+      font-family: Barlow;
+      padding: 1.5em;
+      height: 140px;
+      resize: none; }
+      .modal .field textarea::-webkit-input-placeholder {
+        font-family: Arial; }
+      .modal .field textarea:-ms-input-placeholder {
+        font-family: Arial; }
+      .modal .field textarea::-ms-input-placeholder {
+        font-family: Arial; }
+      .modal .field textarea::placeholder {
+        font-family: Arial; }
+    .modal .field input {
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #bdbdbd; }
+      .modal .field input[type="date"], .modal .field input[type="time"] {
+        position: relative;
+        text-transform: uppercase; }
+        .modal .field input[type="date"]:after, .modal .field input[type="time"]:after {
+          padding-left: 2em;
+          color: #777;
+          display: flex;
+          align-items: center;
+          position: absolute;
+          content: attr(placeholder);
+          top: 0;
+          left: 0;
+          text-transform: capitalize;
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+          font-family: arial;
+          background: #fff; }
+        .modal .field input[type="date"]:focus::after, .modal .field input[type="time"]:focus::after {
+          display: none; }
+        .modal .field input[type="date"]:blur::after, .modal .field input[type="time"]:blur::after {
+          display: flex; }
+      .modal .field input[type="submit"] {
+        border: none;
+        margin: 20px auto 30px;
+        display: block;
+        background: #5A01AB;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.05em; }

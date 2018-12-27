@@ -1,3 +1,22 @@
+// Modal
+
+let closeBtns = document.querySelectorAll('.modal__close');
+for(let btn of closeBtns) {
+    btn.addEventListener('click', function(e) {
+        let modal = this.closest('.modal');
+        modal.classList.add('hidden');
+    })
+}
+
+let openBtns = document.querySelectorAll('.modal__open');
+for(let btn of openBtns) {
+    btn.addEventListener('click', function(e) {
+        let modal = this.getAttribute('data-target');
+        console.log(modal);
+        document.getElementById(modal).classList.remove('hidden');
+    })
+}
+
 // Toggle Dropdowns
 let listers = document.querySelectorAll('.lister');
 

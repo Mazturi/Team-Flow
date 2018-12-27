@@ -24,6 +24,7 @@ html, body, ul, ol, p{
 body{
     font-family: 'Barlow', sans-serif;
     background: #f5f5f5;
+    position: relative;
 }
 
 ::placeholder{
@@ -45,10 +46,10 @@ button, input{
     border: none;
 }
 
-/***** Global Classes *****/
+//***** Global Classes *****//
 
 
-/***** Colors *****/
+//***** Colors *****//
 
 $purple: #5A01AB;
 $lavender: #AC3BFA;
@@ -80,7 +81,7 @@ $pink: #FF4677;
     }
 }
 
-//***** Select Component *****/
+//***** Select Component *****//
 
 .c-select{
     position: relative;
@@ -317,7 +318,6 @@ article{
         }
     }
 }
-
 
 /***** Notification Component *****/
 .c-notifications{
@@ -1014,15 +1014,19 @@ article{
 
 /***** Welcome *****/
 
+.welcome-body{
+    background: #f5f5f5;
+    padding: 3em 5em;
+}
+
 .welcome{
     display: flex;
-    height: 100vh;
     background: #fff;
     justify-content: space-between;
     .left{
         display: flex;
         flex-direction: column;
-        width: 33%;
+        width: 42%;
         background: url('../images/Welcome1.svg');
         background-size: cover;
         .features{
@@ -1058,7 +1062,7 @@ article{
 }
 
     .right{
-        width: 67%;
+        width: 58%;
         flex-direction: column;
         justify-content: center;
         .logotype{
@@ -1200,11 +1204,130 @@ article{
     .connect{
         margin: auto;
         height: 44px;
-
         width: 100%;
         text-transform: uppercase;
         background: $lavender;
         color: #fff;
         justify-content: center;
+    }
+}
+
+.modal {
+    &.hidden {
+        display: none;
+        & .modal__content {
+            opacity: 0;
+            z-index: -1;
+            transform: translateY(20px);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left:  0;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.18);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    &__content{
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background: #d4d4d4; 
+        }
+        max-height: 500px;
+        overflow-y: scroll;
+        position: relative;
+        height: fit-content;
+        padding: 1em 2em;
+        flex-direction: column;
+    }
+    &__title {
+        text-transform: uppercase;
+        margin: 2em 0;
+        font-weight: 500;
+    }
+    &__close{
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        background: url('../images/close.svg') center center no-repeat;
+        background-size: cover;
+        right: 0;
+        top: 0;
+    }
+    form{
+        width: 280px;
+        padding: 0 1.5em;
+    }
+    .field {
+        margin-bottom: 10px;
+        textarea, input{
+            outline: none;
+            width: 100%;
+            &:focus {
+                box-shadow: 0 0 4px rgba($purple, 0.1);
+                border-color: $purple;
+                &::placeholder{
+                    color: $purple;
+                }
+            } 
+        }
+        textarea{
+            font-family: $family;
+            padding: 1.5em;
+            height: 140px;
+            resize: none;
+            &::placeholder {
+                font-family: Arial;
+            }
+        }
+        input{
+            &[type="date"],&[type="time"]{
+                position: relative;
+                &:after{
+                    padding-left: 2em;
+                    color: #777;
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    content: attr(placeholder);
+                    top: 0;
+                    left: 0;
+                    text-transform: capitalize;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 0;
+                    font-family: arial;
+                    background: #fff;
+                }
+                &:focus::after{
+                    display: none;
+                }
+                &:blur::after{
+                    display: flex;
+                }
+                text-transform: uppercase;
+            }
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #bdbdbd;
+            &[type="submit"] {
+                border: none;
+                margin: 20px auto 30px;
+                display: block;
+                background: $purple;
+                width: fit-content;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+        }
     }
 }

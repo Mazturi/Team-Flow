@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,114 @@
 </head>
 
 <body>
+    <div class="modal hidden" id="employee-modal">
+        <div class="modal__content o-card u-vertical-center">
+           <button class="modal__close"></button>
+            <h4 class="modal__title">nouveau employé</h4>
+            <form action="" class="employee-form">
+                <div class="field">
+                    <input type="text" class="o-rounded" placeholder="Nom et Prénom">
+                </div>
+                <div class="field">
+                    <input type="email" class="o-rounded" placeholder="Adresse Email">
+                </div>
+                <div class="field">
+                    <input type="tel" class="o-rounded" placeholder="Téléphone">
+                </div>
+                <div class="field">
+                    <input type="date" class="o-rounded" placeholder="Date de naissance">
+                </div>
+                <div class="field">
+                    <input type="text" class="o-rounded" placeholder="Poste">
+                </div>
+                <div class="field">
+                    <input type="text" class="o-rounded" placeholder="Salaire">
+                </div>
+                <div class="field">
+                    <input type="submit" value="ajouter" class="o-rounded" placeholder="">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal hidden" id="meeting-modal">
+        <div class="modal__content o-card u-vertical-center">
+           <button class="modal__close"></button>
+            <h4 class="modal__title">nouvelle réunion</h4>
+            <form action="" class="meeting-form">
+                <div class="field">
+                    <input type="text" class="o-rounded" placeholder="Titre">
+                </div>
+                <div class="field">
+                    <input type="text" class="o-rounded" placeholder="Salle">
+                </div>
+                <div class="field">
+                    <input type="time" class="o-rounded" placeholder="Heure">
+                </div>
+                <div class="field">
+                    <input type="text" class="o-rounded" placeholder="Correspondant">
+                </div>
+                <div class="field">
+                    <input type="submit" value="ajouter" class="o-rounded" placeholder="">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal hidden" id="client-modal">
+        <div class="modal__content o-card u-vertical-center">
+           <button class="modal__close"></button>
+            <h4 class="modal__title">nouveau client</h4>
+            <form action="" class="client-form">
+                <div class="field">
+                    <input type="text" class="o-rounded" placeholder="Nom et Prénom">
+                </div>
+                <div class="field">
+                    <input type="email" class="o-rounded" placeholder="Adresse Email">
+                </div>
+                <div class="field">
+                    <input type="tel" class="o-rounded" placeholder="Téléphone">
+                </div>
+                <div class="field">
+                    <input type="text" class="o-rounded" placeholder="Société">
+                </div>
+                <div class="field">
+                    <input type="submit" value="ajouter" class="o-rounded" placeholder="">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal hidden" id="project-modal">
+        <div class="modal__content o-card u-vertical-center">
+           <button class="modal__close"></button>
+            <h4 class="modal__title">nouveau projet</h4>
+            <form action="" class="project-form">
+                        <div class="field">
+                            <input type="text" class="o-rounded" placeholder="Nom du projet">
+                        </div>
+                        <div class="field">
+                            <textarea class="o-rounded" name="" placeholder="description" id="" cols="30" rows="10"></textarea>
+                        </div> 
+                        <div class="field">
+                            <input type="text" class="o-rounded" placeholder="client">
+                        </div>
+                        <div class="field">
+                            <input type="date" class="o-rounded" placeholder="Date début">
+                        </div>
+                        <div class="field">
+                            <input type="number" class="o-rounded" placeholder="durrée">
+                        </div>
+                        <div class="field">
+                            <input type="text" class="o-rounded" placeholder="budget">
+                        </div> 
+                <div class="field">
+                    <input type="submit" value="ajouter" class="o-rounded" placeholder="">
+                </div>
+            </form>
+        </div>
+    </div>
+     
     <!-- Main Navbar -->
     <header class="c-header u-vertical-center">
         <div class="wrapper">
@@ -22,10 +130,10 @@
             <div class="c-select c-add-btn ">
                 <a href="#" class="c-select__launcher o-rounded u-vertical-center"><span class="plus">+</span><span class="selection">ajouter</span> </a>
                 <ul class="c-select__options">
-                    <li data-value="option1" class="c-select__option">projet</li>
-                    <li data-value="option2" class="c-select__option">client</li>
-                    <li data-value="option3" class="c-select__option">employé</li>
-                    <li data-value="option4" class="c-select__option">réunion</li>
+                    <li data-value="option1" class="c-select__option modal__open" data-target="project-modal">projet</li>
+                    <li data-value="option2" class="c-select__option modal__open" data-target="client-modal">client</li>
+                    <li data-value="option3" class="c-select__option modal__open" data-target="employee-modal">employé</li>
+                    <li data-value="option4" class="c-select__option modal__open" data-target="meeting-modal">réunion</li>
                 </ul>
             </div>
 
