@@ -81,6 +81,16 @@ $pink: #FF4677;
     }
 }
 
+%scroll {
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: #d4d4d4;
+    }
+}
+
 //***** Select Component *****//
 
 .c-select{
@@ -151,17 +161,17 @@ $pink: #FF4677;
     width: 96%;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     &__heading{
-        margin-top: 15px;
+        /*margin-top: 15px;*/
         padding: 0 0.5em;
         margin-bottom: 1em;
         justify-content: space-between;
     }
     &__title{
         margin-right: auto;
-        font-size: 22px;
+        font-size: 1.15rem;
         margin: 0;
         font-weight: 500;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
     &.hidden{
         display: none;
@@ -249,7 +259,7 @@ article{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 4.5em 4.5em;
+    padding: 4.5em 4.5em 0 4.5em;
 }
 
 .u-condensed{
@@ -1229,13 +1239,7 @@ article{
     justify-content: center;
     align-items: center;
     &__content{
-        &::-webkit-scrollbar {
-            width: 8px;
-        }
-        &::-webkit-scrollbar-thumb {
-            border-radius: 4px;
-            background: #d4d4d4; 
-        }
+        @extend %scroll;
         max-height: 500px;
         overflow-y: scroll;
         position: relative;
@@ -1326,3 +1330,321 @@ article{
         }
     }
 }
+
+/*************************
+    NOTIFICATIONS
+**************************/
+.notifications {
+    max-height: 450px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.c-type-box {
+    position: relative;
+    padding: 1em;
+    .attachement {
+        position: absolute;
+        top: 37px;
+        left: 40px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background: url('../images/Plus.svg') center center no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        input[type="file"] {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    textarea {
+        &:focus {
+            border: 1px solid $purple;
+        }
+        /*background: grey;*/
+        font-family: 'Barlow', sans-serif;
+        outline: 0;
+        padding: 1em 4em;
+        width: 100%;
+        height: 100%;
+        resize: none;
+        border: 1px solid #c6c6c6;
+        transition: all 0.3s ease-in-out;
+    }
+    button[type="submit"] {
+        background: transparent;
+        position: absolute;
+        top: 25px;
+        right: 40px;
+        height: 40px;
+        width: 40px;
+        svg{
+            &:hover {
+                stroke: $purple;
+            }
+            cursor: pointer;
+            stroke-width: 1px;
+            stroke: #777;
+            height: 100%;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.messages-box {
+    width: 68%;
+    position: relative;
+    .heading {
+        &.corresponding {
+            background: #f5f5f5;
+            padding: 0.5em 1em;
+            height: 60px;
+        }
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: -1px;
+            height: 1px;
+            width: 100%;
+            left: 0;
+            background: #eee;
+        }
+    }
+}
+
+    .content {
+        @extend %scroll;
+        overflow-y: scroll;
+        height: 280px;
+        width: 100%;
+        padding: 1.5em 1em 0;
+        display: flex;
+        flex-direction: column;
+        .message {
+            &.me {
+                background: $pink;
+                align-self: flex-end;
+            }
+            background: $lavender;
+            color: #fff;
+            margin-bottom: 8px;
+            padding: 0.5em 1em;
+            width: fit-content;
+            border-radius: 4px;
+        }
+    }
+
+    .messages-search {
+        margin-bottom: 10px;
+        height: 58px;
+        padding: 0.75em;
+        position: relative;
+        &::after, &::before {
+            position: absolute;
+            content: '';   
+        }
+        &::after {
+            height: 1px;
+            width: 100%;
+            bottom: -2px;
+            left: 0;
+            background: #eee;
+        }
+        &::before {
+            height: 18px;
+            width: 18px;
+            top: calc(50% - 9px);
+            right: 20px;
+            background: url('../images/Search-icon.svg');
+        }
+        input {
+            border-radius: 4px;
+            width: 100%;
+            height: 100%;
+            padding: 0.5em 1em;
+        }
+    }    
+    .messages-list {
+        width: 30%;
+        overflow: hidden;
+    }
+    .correspondings {
+        backface-visibility: hidden;
+        max-height: 375px;
+        @extend %scroll;
+        overflow: scroll;
+        .corresponding {
+            cursor: pointer;
+        }
+    }
+    
+    .corresponding {
+        position: relative;
+        &.active {
+            /*border-left: 2px solid $purple;*/
+            background: #f5f5f5;
+        }
+        display: flex;
+        align-items: center;
+        padding: 0.5em 1em;
+        .name{
+            text-transform: capitalize;
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 500;
+        }
+        .function {
+            text-transform: capitalize;
+            color: #777;
+        }
+        img {
+            height: 40px;
+            margin-right: 16px;
+            border-radius: 50%;
+        }
+    }
+
+
+
+/*************************
+    Client Dashboard
+**************************/
+
+.c-clients {
+    &.team {
+        &>li {
+            justify-content: space-between;
+        }
+        .customer, .mission, .email {
+            width: 20%;
+        }
+        .function {
+            width: 10%;
+        }
+        .phone {
+            width: 12%;
+        }
+    }
+}
+
+.c-client-project {
+    padding: 2em;
+    .heading {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .project-title {
+        font-weight: 500;
+        font-size: 1.25rem;
+        margin: 4px 0;
+        text-transform: capitalize;
+    }
+    .right {
+        width: 120px;
+        color: $purple;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .number {
+            margin-right: 8px;
+            font-size: 2.25rem;
+        }
+    }
+    .description {
+        margin-bottom: 10px;
+        line-height: 1.5em;
+    }
+    .members {
+        justify-content: center;
+        display: flex;
+        .c-employee {
+            height: 180px;
+            margin-bottom: 0;
+        }
+    }
+    .details {
+        margin: 18px 0;
+        display: flex;
+        justify-content: center;
+        .select {
+            display: flex;
+            align-items: center;
+            position: relative;
+            min-height: 25px;
+            padding: 0 ;
+            border-bottom: 1px solid #c7c7c7;
+            &:first-of-type {
+                margin-right: 30px;
+            }
+            .arrow {
+                position: absolute;
+                top: 8px;
+                right: 5px;
+                @extend %down-arrow;
+                border-color: #111 transparent transparent transparent;
+            }
+            select {
+                font-size: 1.2rem;
+                z-index: 5;
+                background: transparent;
+                padding-right: 32px;
+                text-transform: capitalize;
+                border: none;
+                -webkit-appearance : none;
+                outline: none;
+            }
+            
+        }
+    }
+    .message {
+        h4 {
+            font-weight: 500;
+            text-transform: capitalize;
+            margin: 4px 0;
+        }
+        .c-type-box {
+            padding: 1em 0;
+            svg {
+                fill: $lavender;
+            }
+            textarea {
+                padding-top: 22px;
+            }
+        }
+    }
+}
+    .c-notifications-list {
+        &__item {
+            position: relative;
+            padding: 0.75em 1em;
+            &:not(:last-of-type)::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                left: 0;
+                background: #c7c7c7;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,7 +14,7 @@
         <div class="modal__content o-card u-vertical-center">
            <button class="modal__close"></button>
             <h4 class="modal__title">nouveau employé</h4>
-            <form action="" class="employee-form">
+            <form action="none" class="employee-form">
                 <div class="field">
                     <input type="text" class="o-rounded" placeholder="Nom et Prénom">
                 </div>
@@ -25,7 +25,7 @@
                     <input type="tel" class="o-rounded" placeholder="Téléphone">
                 </div>
                 <div class="field">
-                    <input type="date" class="o-rounded" placeholder="Date de naissance">
+                    <input type="date" class="o-rounded">
                 </div>
                 <div class="field">
                     <input type="text" class="o-rounded" placeholder="Poste">
@@ -34,7 +34,7 @@
                     <input type="text" class="o-rounded" placeholder="Salaire">
                 </div>
                 <div class="field">
-                    <input type="submit" value="ajouter" class="o-rounded" placeholder="">
+                    <input type="submit" value="ajouter" class="o-rounded">
                 </div>
             </form>
         </div>
@@ -44,7 +44,7 @@
         <div class="modal__content o-card u-vertical-center">
            <button class="modal__close"></button>
             <h4 class="modal__title">nouvelle réunion</h4>
-            <form action="" class="meeting-form">
+            <form action="none" class="meeting-form">
                 <div class="field">
                     <input type="text" class="o-rounded" placeholder="Titre">
                 </div>
@@ -52,13 +52,13 @@
                     <input type="text" class="o-rounded" placeholder="Salle">
                 </div>
                 <div class="field">
-                    <input type="time" class="o-rounded" placeholder="Heure">
+                    <input type="time" class="o-rounded">
                 </div>
                 <div class="field">
                     <input type="text" class="o-rounded" placeholder="Correspondant">
                 </div>
                 <div class="field">
-                    <input type="submit" value="ajouter" class="o-rounded" placeholder="">
+                    <input type="submit" value="ajouter" class="o-rounded">
                 </div>
             </form>
         </div>
@@ -68,7 +68,7 @@
         <div class="modal__content o-card u-vertical-center">
            <button class="modal__close"></button>
             <h4 class="modal__title">nouveau client</h4>
-            <form action="" class="client-form">
+            <form action="none" class="client-form">
                 <div class="field">
                     <input type="text" class="o-rounded" placeholder="Nom et Prénom">
                 </div>
@@ -82,7 +82,7 @@
                     <input type="text" class="o-rounded" placeholder="Société">
                 </div>
                 <div class="field">
-                    <input type="submit" value="ajouter" class="o-rounded" placeholder="">
+                    <input type="submit" value="ajouter" class="o-rounded">
                 </div>
             </form>
         </div>
@@ -92,18 +92,18 @@
         <div class="modal__content o-card u-vertical-center">
            <button class="modal__close"></button>
             <h4 class="modal__title">nouveau projet</h4>
-            <form action="" class="project-form">
+            <form action="none" class="project-form">
                         <div class="field">
                             <input type="text" class="o-rounded" placeholder="Nom du projet">
                         </div>
                         <div class="field">
-                            <textarea class="o-rounded" name="" placeholder="description" id="" cols="30" rows="10"></textarea>
+                            <textarea class="o-rounded"  placeholder="description" cols="30" rows="10"></textarea>
                         </div> 
                         <div class="field">
                             <input type="text" class="o-rounded" placeholder="client">
                         </div>
                         <div class="field">
-                            <input type="date" class="o-rounded" placeholder="Date début">
+                            <input type="date" class="o-rounded">
                         </div>
                         <div class="field">
                             <input type="number" class="o-rounded" placeholder="durrée">
@@ -112,7 +112,7 @@
                             <input type="text" class="o-rounded" placeholder="budget">
                         </div> 
                 <div class="field">
-                    <input type="submit" value="ajouter" class="o-rounded" placeholder="">
+                    <input type="submit" value="ajouter" class="o-rounded">
                 </div>
             </form>
         </div>
@@ -139,9 +139,9 @@
 
             <div class="u-vertical-center">
                 <div class="c-notifications">
-                    <a href="" class="c-notifications__bell lister" data-target="c-notifications__box"></a>
+                    <a href="" class="c-notifications__bell lister" data-target="#notifications-box"></a>
                     <div class="c-notifications__bubble u-vertical-center">3</div>
-                    <ul class="c-notifications__box o-card js-dropdown">
+                    <ul class="c-notifications__box o-card js-dropdown" id="notifications-box">
                         <li class="heading">Vous avez 3 notifications non lus</li>
                         <li class="notification">
                             <a href="">
@@ -187,26 +187,26 @@
             <button class="expand u-vertical-center"></button>
             <nav class="c-menu">
                 <a href="#statistics" class="c-menu__link c-menu__link--active">
-                    <img src="images/Stats.svg">statistiques
+                    <img src="images/Stats.svg" alt="">statistiques
                 </a>
                 <a href="#employees" class="c-menu__link">
-                    <img src="images/Employees.svg">employés
+                    <img src="images/Employees.svg"  alt="">employés
                 </a>
                 <a href="#projects" class="c-menu__link">
-                    <img src="images/Projects.svg">projets
+                    <img src="images/Projects.svg" alt="">projets
                 </a>
                 <a href="#meetings" class="c-menu__link">
-                    <img src="images/Meetings.svg">réunions
+                    <img src="images/Meetings.svg" alt="">réunions
                 </a>
                 <a href="#clients" class="c-menu__link">
-                    <img src="images/Clients.svg">clients
+                    <img src="images/Clients.svg" alt="">clients
                 </a>
 
                 <a href="#notifications" class="c-menu__link">
-                    <img src="images/Bell-white.svg">notifications
+                    <img src="images/Bell-white.svg" alt="">notifications
                 </a>
                 <a href="#settings" class="c-menu__link">
-                    <img src="images/Settings.svg">paramètres
+                    <img src="images/Settings.svg" alt="">paramètres
                 </a>
             </nav>
         </aside>
@@ -917,6 +917,113 @@
             <section class="section hidden" id="notifications">
                 <div class="section__heading u-vertical-center">
                     <h5 class="section__title">notifications</h5>
+                </div>
+                <div class="notifications">
+                    <div class="messages-list o-card">
+                        <div class="messages-search">
+                            <input type="text">
+                        </div>
+                        <div class="correspondings">
+                            <div class="corresponding">
+                                <div class="image">
+                                    <img src="http://via.placeholder.com/50" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h5 class="name">hamza ben abdesselem</h5>
+                                    <p class="function">marketeur</p>
+                                </div>
+                            </div>
+                            <div class="corresponding">
+                                <div class="image">
+                                    <img src="http://via.placeholder.com/50" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h5 class="name">Akram maztouri</h5>
+                                    <p class="function">intégrateur web</p>
+                                </div>
+                            </div>
+                            <div class="corresponding active">
+                                <div class="image">
+                                    <img src="http://via.placeholder.com/50" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h5 class="name">mohammed fatnassi</h5>
+                                    <p class="function">intégrateur web</p>
+                                </div>
+                            </div>
+                            <div class="corresponding">
+                                <div class="image">
+                                    <img src="http://via.placeholder.com/50" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h5 class="name">imen bouallegue</h5>
+                                    <p class="function">designer</p>
+                                </div>
+                            </div>
+                            <div class="corresponding">
+                                <div class="image">
+                                    <img src="http://via.placeholder.com/50" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h5 class="name">sana ferchichi</h5>
+                                    <p class="function">rédactrice</p>
+                                </div>
+                            </div>
+                            <div class="corresponding">
+                                <div class="image">
+                                    <img src="http://via.placeholder.com/50" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h5 class="name">amira rouissi</h5>
+                                    <p class="function">chef projet</p>
+                                </div>
+                            </div>
+                            <div class="corresponding">
+                                <div class="image">
+                                    <img src="http://via.placeholder.com/50" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h5 class="name">mazen touati</h5>
+                                    <p class="function">développeur web</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messages-box o-card">
+                        <div class="left">
+                            <div class="heading corresponding">
+                                <div class="image">
+                                    <img src="http://via.placeholder.com/50" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h5 class="name">Achref achour</h5>
+                                    <p class="function">designer</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p class="message">lorem ipsum dolor</p>
+                                <p class="message me">lorem ipsum dolor sit amet consectetuer adipiscing elit </p>
+                                <p class="message">lorem ipsum dolor</p>
+                                <p class="message me">lorem ipsum dolor</p>
+                                <p class="message">lorem ipsum dolor sit amet consectetuer adipiscing elit </p>
+                                <p class="message">lorem ipsum dolor</p>
+                                <p class="message">lorem ipsum dolor sit amet consectetuer adipiscing elit </p>
+                                <p class="message me">lorem ipsum dolor</p>
+                            </div>
+                            <div class="c-type-box">
+                                <form action="none">
+                                    <textarea></textarea>
+                                    <div class="attachement">
+                                        <input type="file">
+                                    </div>
+                                    <button type="submit">
+                                        <svg width="41" height="34" viewBox="0 0 41 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.936197 0.946503L39.6945 17.6014L0.961503 33.0774L7.79954 17.8227L7.88798 17.6254L7.8048 17.4258L0.936197 0.946503Z"/></svg>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- End Notifications -->  
