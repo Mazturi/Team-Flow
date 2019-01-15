@@ -66,10 +66,10 @@ button, input {
     -webkit-transform: translateY(0);
     transform: translateY(0); }
 
-.modal__content::-webkit-scrollbar, .content::-webkit-scrollbar, .correspondings::-webkit-scrollbar {
+.modal__content::-webkit-scrollbar, .content::-webkit-scrollbar, .correspondings::-webkit-scrollbar, .employee-projects .projects-status::-webkit-scrollbar {
   width: 8px; }
 
-.modal__content::-webkit-scrollbar-thumb, .content::-webkit-scrollbar-thumb, .correspondings::-webkit-scrollbar-thumb {
+.modal__content::-webkit-scrollbar-thumb, .content::-webkit-scrollbar-thumb, .correspondings::-webkit-scrollbar-thumb, .employee-projects .projects-status::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background: #d4d4d4; }
 
@@ -135,7 +135,6 @@ button, input {
   width: 96%;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
   .section__heading {
-    /*margin-top: 15px;*/
     padding: 0 0.5em;
     margin-bottom: 1em;
     justify-content: space-between; }
@@ -1308,7 +1307,10 @@ article {
     display: flex; }
     .c-client-project .members .c-employee {
       height: 180px;
+      width: 200px;
       margin-bottom: 0; }
+      .c-client-project .members .c-employee:hover {
+        background: #f5f5f5; }
   .c-client-project .details {
     margin: 18px 0;
     display: flex;
@@ -1358,3 +1360,154 @@ article {
     height: 1px;
     left: 0;
     background: #c7c7c7; }
+
+.employee-projects {
+  height: 510px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .employee-projects .projects-status {
+    width: 28%; }
+  .employee-projects .c-client-project {
+    width: 70%; }
+  .employee-projects .projects-status {
+    max-height: 100%;
+    overflow-y: scroll; }
+    .employee-projects .projects-status .item {
+      padding: 1em 2em;
+      position: relative; }
+      .employee-projects .projects-status .item.active {
+        border-left: 3px solid #FF4677;
+        background: #f5f5f5; }
+      .employee-projects .projects-status .item:not(:last-of-type)::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: #eee; }
+    .employee-projects .projects-status .status {
+      text-transform: capitalize;
+      font-size: 0.95rem;
+      text-align: right;
+      margin-bottom: 4px; }
+      .employee-projects .projects-status .status-progressing {
+        color: tomato; }
+      .employee-projects .projects-status .status-done {
+        color: darkcyan; }
+    .employee-projects .projects-status .title {
+      margin: 4px 0;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 1rem; }
+
+.c-resume {
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px; }
+
+.clone {
+  text-align: right;
+  margin-bottom: 15px; }
+  .clone button {
+    color: #fff;
+    background: transparent;
+    padding: 0 2em;
+    background: #5A01AB; }
+    .clone button:first-letter {
+      text-transform: capitalize; }
+
+.c-contacts {
+  position: relative;
+  padding: 0 20px; }
+  .c-contacts::after, .c-contacts::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #eee; }
+  .c-contacts::after {
+    left: 0; }
+  .c-contacts::before {
+    right: 0; }
+  .c-contacts p span:first-of-type {
+    text-align: center;
+    width: 25px;
+    margin-right: 8px; }
+  .c-contacts p:first-letter {
+    text-transform: capitalize; }
+  .c-contacts p:not(:last-of-type) {
+    margin-bottom: 16px; }
+
+.c-person {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+  .c-person-picture {
+    margin-right: 16px; }
+    .c-person-picture img {
+      height: 120px;
+      width: 120px;
+      border-radius: 50%; }
+  .c-person-informations .title {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0; }
+  .c-person-informations .function {
+    margin-bottom: 8px;
+    text-transform: capitalize; }
+  .c-person-informations .mission {
+    line-height: 1.4em;
+    color: #777;
+    font-size: 0.9rem; }
+    .c-person-informations .mission li:first-letter {
+      text-transform: capitalize; }
+
+.profile-details {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between; }
+
+.extra {
+  padding: 1em 2em;
+  width: 68%; }
+  .extra .heading {
+    color: #AC3BFA;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 12px; }
+    .extra .heading:first-letter {
+      text-transform: capitalize; }
+  .extra .row {
+    display: flex; }
+  .extra .personal, .extra .professional {
+    margin-bottom: 12px; }
+    .extra .personal .field, .extra .professional .field {
+      display: flex; }
+      .extra .personal .field .title, .extra .professional .field .title {
+        width: 150px;
+        font-weight: 500;
+        text-transform: capitalize; }
+      .extra .personal .field p, .extra .professional .field p {
+        margin-bottom: 8px; }
+  .extra .rights, .extra .options {
+    width: 100%;
+    font-size: 0.95rem; }
+    .extra .rights .wrap, .extra .options .wrap {
+      display: flex;
+      justify-content: space-between; }
+      .extra .rights .wrap .field, .extra .options .wrap .field {
+        width: 25%;
+        margin-bottom: 12px; }
+        .extra .rights .wrap .field input, .extra .options .wrap .field input {
+          margin-right: 10px; }
+
+.profile-calendar {
+  width: 30%;
+  margin-bottom: 0; }

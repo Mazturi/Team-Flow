@@ -1,4 +1,3 @@
-
 document.querySelector('.expand').onclick =  function(e) {
     e.preventDefault();
     this.classList.toggle('spin');
@@ -11,7 +10,6 @@ document.querySelector('.expand').onclick =  function(e) {
         section.classList.toggle('u-condensed');
     }
 }
-
 
 // Modal
 

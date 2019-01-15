@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team Flow</title>
+    <link rel="icon" type="image/png" href="images/fav.png" />
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <!-- Main Navbar -->
+    <header class="c-header u-vertical-center">
+        <div class="wrapper">
+            <a href="#"  class="logo">
+                <img src="images/Logotype.svg" alt="Team Flow">
+            </a>
+            <form action="#" class="search-box">
+                <input type="text" class="o-rounded" placeholder="rechercher">
+            </form>
+
+            <div class="u-vertical-center">
+                <div class="c-notifications">
+                    <a href="" class="c-notifications__bell lister" data-target="#notifications-box"></a>
+                    <div class="c-notifications__bubble u-vertical-center">3</div>
+                    <ul class="c-notifications__box o-card js-dropdown" id="notifications-box">
+                        <li class="heading">Vous avez 3 notifications non lus</li>
+                        <li class="notification">
+                            <a href="">
+                                <p class="notification__message">X à terminé sa tache avec succés</p>
+                                <p class="notification__time">Il y a 5 minutes</p>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="">
+                                <p class="notification__message">X à terminé sa tache avec succés</p>
+                                <p class="notification__time">Il y a 5 minutes</p>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="">
+                                <p class="notification__message">X à terminé sa tache avec succés</p>
+                                <p class="notification__time">Il y a 5 minutes</p>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="">
+                                <p class="see-all">afficher tout</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="c-user">
+                    <img src="images/imen.jpg" alt="" class="c-user__avatar">
+                    <a href="" class="lister c-user__lister" data-target="#user-options"></a>
+                    <ul class="c-user__options js-dropdown o-card" id="user-options">
+                        <li><a href="">profil</a></li>
+                        <li><a href="">déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Start Sidebar -->
+        <aside class="c-sidebar condensed">
+            <button class="expand u-vertical-center"></button>
+            <nav class="c-menu">
+                <a href="#profile" class="c-menu__link c-menu__link--active">
+                    <img src="images/Profile.svg" alt="">profile
+                </a>
+                <a href="#employees" class="c-menu__link">
+                    <img src="images/Employees.svg"  alt="">équipe
+                </a>
+                <a href="#projects" class="c-menu__link">
+                    <img src="images/Projects.svg" alt="">projets
+                </a>
+                <a href="#meetings" class="c-menu__link">
+                    <img src="images/Meetings.svg" alt="">réunions
+                </a>
+                <a href="#notifications" class="c-menu__link">
+                    <img src="images/Bell-white.svg" alt="">notifications
+                </a>
+            </nav>
+        </aside>
+        <!-- End Sidebar -->
+        
+        <!-- Start Article -->
+        <article>
+            <!-- Start Profile -->
+            <section class="section active" id="profile">
+                <!--<div class="section__heading u-vertical-center">
+                    <h5 class="section__title">statistiques</h5>
+                </div>-->
+                <div class="c-resume u-vertical-center o-card">
+                   
+                    <div class="c-person u-vertical-center">
+                        <div class="c-person-picture u-vertical-center">
+                            <img src="images/imen.jpg" alt="person">
+                        </div>
+                        <div class="c-person-informations">
+                            <h6 class="title">imen bouallegue</h6>
+                            <p class="function">web designer</p>
+                            <ul class="mission">
+                                <li>Définit l'ergonomie et la charte graphique de l'application web</li>
+                                <li>realise les interfaces de l'espace administrateur</li>
+                                <li>définit l'identité visuelle, l'organisation des pages, l'arboresence</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="c-contacts">
+
+                        <p class="c-contacts__email u-vertical-center">
+                            <span><img src="images/Mail.svg" alt=""></span>
+                            <span>imen.bouallegue@gmail.com</span>          
+                        </p>
+
+                        <p class="c-contacts__phone u-vertical-center">
+                            <span><img src="images/Phone.svg" alt=""></span>
+                            <span>+21625484236</span>
+                        </p>
+
+                        <p class="c-contacts__address u-vertical-center">
+                            <span><img src="images/Location.svg" alt=""></span>
+                            <span>Cité ettahrir, tunis, tunisie</span>
+                        </p>
+                    </div>
+                        
+                    <div class="clone">
+                        <button class="o-rounded">télécharger une copie</button>
+                    </div>
+                    
+                </div>
+                
+                <div class="profile-details">
+                    <div class="extra o-card">
+                        <div class="personal">
+                            <h6 class="heading">coordonnées personnelles</h6>
+                            <div class="row">
+                                <div class="right">
+                                    <div class="field">
+                                        <p class="title">numero cin</p>
+                                        <p>lorem ipsum</p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="title">sexe</p>
+                                        <p>lorem ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="left">
+                                    <div class="field">
+                                        <p class="title">date de naissance</p>
+                                        <p>lorem ipsum</p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="title">état civil</p>
+                                        <p>lorem ipsum</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="professional">
+                            <h6 class="heading">coordonnées professionnelles</h6>
+                            <div class="row">
+                               
+                                <div class="right">
+                                    <div class="field">
+                                        <p class="title">rib</p>
+                                        <p>lorem ipsum</p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="title">contrat</p>
+                                        <p>lorem ipsum</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="left">
+                                    <div class="field">
+                                        <p class="title">matricule</p>
+                                        <p>lorem ipsum</p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="title">cnss</p>
+                                        <p>lorem ipsum</p>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div class="rights">
+                            <h6 class="heading">droits</h6>
+                            <div class="wrap">
+                                <div class="field u-vertical-center">
+                                    <input type="checkbox">24 jours congés
+                                </div>
+                                <div class="field u-vertical-center">
+                                    <input type="checkbox">6 jours maladie
+                                </div>
+                                <div class="field u-vertical-center">
+                                    <input type="checkbox">2 mois maternité
+                                </div>
+                                <div class="field u-vertical-center">
+                                    <input type="checkbox">autorisation
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="options">
+                            <h6 class="heading">options</h6>
+                            <div class="wrap">
+                                <div class="field u-vertical-center">
+                                    <input type="checkbox">jours fériés    
+                                </div>
+                                <div class="field u-vertical-center">
+                                    <input type="checkbox">weekend repos    
+                                </div>
+                                <div class="field u-vertical-center">
+                                    <input type="checkbox">ticket restaurant
+                                </div>
+                                <div class="field u-vertical-center">
+                                    <input type="checkbox">13éme mois
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="auto-jsCalendar profile-calendar o-card" data-navigator-position="right" data-language="fr"></div>
+                </div>
+                
+            </section>
+            <!-- End Profile -->
+            
+            <!-- Start Team -->
+            <section class="section hidden" id="employees">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">équipe (8)</h5>
+                </div>
+
+                <ul class="c-clients team">
+                    <li class="c-clients__item c-clients__item--first">
+                        <div class="customer">
+                            <p>nom</p>
+                        </div>
+                        <div class="function">
+                            <p>poste</p>
+                        </div>
+                        <div class="mission">
+                            <p>mission</p>
+                        </div>
+                        <div class="email">
+                            <p>adresse email</p>
+                        </div>
+                        <div class="phone">
+                            <p>telephone</p>
+                        </div>
+                        <div class="actions">
+                            <p>actions</p>
+                        </div>
+                    </li>
+
+                    <li class="c-clients__item o-card ">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>MF</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Mohamed fatnassi</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="function">
+                            <p>intégrateur</p>
+                        </div>
+                        <div class="mission">
+                            <p>espace client de l'application</p>
+                        </div>
+                        <div class="email">
+                            <p>Mohamed.fatnassi@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+                    <li class="c-clients__item o-card ">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>AA</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Achref Achour</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="function">
+                            <p>designer</p>
+                        </div>
+                        <div class="mission">
+                            <p>espace client de l'application</p>
+                        </div>
+                        <div class="email">
+                            <p>Achref.achour@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+
+                    <li class="c-clients__item o-card ">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>IB</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Imen Bouallegue</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="function">
+                            <p>designer</p>
+                        </div>
+                        <div class="mission">
+                            <p>espace client de l'application</p>
+                        </div>
+                        <div class="email">
+                            <p>Imen.bouallegue@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+                    <li class="c-clients__item o-card ">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>IB</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Walid Tanazefti</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="function">
+                            <p>marketeur</p>
+                        </div>
+                        <div class="mission">
+                            <p>espace client de l'application</p>
+                        </div>
+                        <div class="email">
+                            <p>Walid.tanazefti@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+
+                    <li class="c-clients__item o-card">
+                        <div class="customer u-vertical-center">
+                            <div class="customer__avatar u-vertical-center">
+                                <p>IB</p>
+                            </div>
+                            <div class="customer_details">
+                                <p class="customer__name">Dejla Aouini</p>
+                                <p class="customer__company">12 labs</p>
+                            </div>
+                        </div>
+
+                        <div class="function">
+                            <p>développeur</p>
+                        </div>
+                        <div class="mission">
+                            <p>espace client de l'application</p>
+                        </div>
+                        <div class="email">
+                            <p>Deja.aouini@12labs.tn</p>
+                        </div>
+                        <div class="phone">
+                            <p>+216 36554433</p>
+                        </div>
+                        <div class="actions">
+                            <img src="images/Pen.svg" alt="edit">
+                            <img src="images/Trash.svg" alt="delete">
+                        </div>
+                    </li>
+
+                </ul>
+
+                <nav class="c-pagination ">
+                    <a href="#" class="c-pagination__item u-vertical-center c-pagination__item--active">1</a>
+                    <a href="" class="c-pagination__item u-vertical-center">2</a>
+                    <a href="" class="c-pagination__item u-vertical-center">3</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">4</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">5</a>
+                    <a href="#" class="c-pagination__item u-vertical-center">6</a>
+                </nav>
+            </section>
+            <!-- End Team -->
+        
+            <!-- Start Projects -->
+            <section class="section hidden employee-projects" id="projects">
+                <!--<div class="section__heading u-vertical-center">
+                    <h5 class="section__title">Projets (24)</h5>
+                </div>-->
+                <div class="projects-status o-card">
+                    <ul class="items">
+                        <li class="item">
+                            <div class="status status-progressing">en cours</div>
+                            <div class="heading">
+                                <h5 class="title">application web</h5>
+                                <p class="deadline">05 janvier - 10 mars 2019</p>
+                            </div>
+                        </li>
+                        
+                        <li class="item active">
+                            <div class="status status-progressing">en cours</div>
+                            <div class="heading">
+                                <h5 class="title">application web</h5>
+                                <p class="deadline">05 janvier - 10 mars 2019</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="status status-progressing">en cours</div>
+                            <div class="heading">
+                                <h5 class="title">application web</h5>
+                                <p class="deadline">05 janvier - 10 mars 2019</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="status status-done">accompli</div>
+                            <div class="heading">
+                                <h5 class="title">application web</h5>
+                                <p class="deadline">05 janvier - 10 mars 2019</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="status status-done">accompli</div>
+                            <div class="heading">
+                                <h5 class="title">application web</h5>
+                                <p class="deadline">05 janvier - 10 mars 2019</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="status status-done">accompli</div>
+                            <div class="heading">
+                                <h5 class="title">application web</h5>
+                                <p class="deadline">05 janvier - 10 mars 2019</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="c-client-project o-card">
+                   
+                    <div class="heading">
+                        <div class="left">
+                            <h4 class="project-title">application web</h4>
+                            <p class="period">05 janvier - 10 mars 2019</p>
+                        </div>
+                        <div class="right">
+                            <span class="number">50</span>
+                            <span>jours pour terminer</span>
+                        </div>
+                    </div>
+                    
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
+                    <div class="members">
+                        <div class="c-employee u-vertical-center">
+                            <img src="images/amira.jpg" alt="" class="c-employee__image">
+                            <h3 class="c-employee__name">amira rouissi</h3>
+                            <p class="c-employee__function">chef de projet</p>
+                            <p class="c-employee__email">amira.rouissi@gmail.com</p>
+                        </div>
+                        <div class="c-employee u-vertical-center">
+                            <img src="images/imen.jpg" alt="" class="c-employee__image">
+                            <h3 class="c-employee__name">Imen bouallegue</h3>
+                            <p class="c-employee__function">designer</p>
+                            <p class="c-employee__email">imen.bouallegue@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="details">
+                        <div class="select">
+                           <div class="arrow"></div>
+                            <select>
+                                <option value="">etat d'avancement du projet</option>
+                                <option value="">option2</option>
+                                <option value="">option3</option>
+                            </select>
+                        </div>
+                       <div class="select">
+                           <div class="arrow"></div>
+                           <select>
+                                <option value="">réglements du projet</option>
+                                <option value="">option2</option>
+                                <option value="">option3</option>
+                            </select>
+                       </div>
+                    </div>                    
+                </div>
+            </section>
+            <!-- End Projects -->
+            
+            <!-- Start Meetings -->
+            <section class="section hidden" id="meetings">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">Réunions</h5>
+                </div>
+                <div class="meetings">
+                    <div class="auto-jsCalendar o-card" data-navigator-position="right" data-language="fr"></div>
+                    <div class="c-planning today o-card">
+                       
+                        <div class="c-planning__heading">
+                            <h5 class="reminder">aujourd'hui 22 décembre</h5>
+                            <h5 class="number">(2 réunions)</h5>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options5"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options5">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options6"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options6">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="c-planning this-week o-card">
+                       
+                        <div class="c-planning__heading">
+                            <h5 class="reminder">cette semaine</h5>
+                            <h5 class="number">(12 réunions)</h5>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options7"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options7">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options1"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options1">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                        
+                        <div class="c-meeting">
+                            <div class="c-meeting__name">
+                                <h4>application e-commerce</h4>
+                                <div class="c-meeting__actions">
+                                    <a href="" class="lister" data-target="#meeting-options2"></a>
+                                    <ul class="c-meeting__options js-dropdown o-card" id="meeting-options2">
+                                        <li><a href="">modifier</a></li>
+                                        <li><a href="">supprimer</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="c-meeting__client">foulen el fouleni</p>
+                            <div class="c-meeting__details">
+                                <p class="time">à 15:00</p>
+                                <p class="location">salle de réunion 4</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- End Meetings -->
+            
+            <!-- Start Notifications -->
+            <section class="section hidden" id="notifications">
+                <div class="section__heading u-vertical-center">
+                    <h5 class="section__title">notifications (8)</h5>
+                </div>
+                <ul class="c-notifications-list o-card">
+                    <li class="c-notifications-list__item">vous avez une réunion à 9H avec les membres de l'équipe</li>
+                    <li class="c-notifications-list__item">vous avez une réunion à 9H avec les membres de l'équipe</li>
+                    <li class="c-notifications-list__item">vous avez une réunion à 9H avec les membres de l'équipe</li>
+                    <li class="c-notifications-list__item">vous avez une réunion à 9H avec les membres de l'équipe</li>
+                    <li class="c-notifications-list__item">vous avez une réunion à 9H avec les membres de l'équipe</li>
+                    <li class="c-notifications-list__item">vous avez une réunion à 9H avec les membres de l'équipe</li>
+                    <li class="c-notifications-list__item">vous avez une réunion à 9H avec les membres de l'équipe</li>
+                    <li class="c-notifications-list__item">vous avez une réunion à 9H avec les membres de l'équipe</li>
+                </ul>
+            </section>
+            <!-- End Notifications -->
+        </article>
+        <!-- End Article -->
+    </main>
+    <script src="js/jsCalendar.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

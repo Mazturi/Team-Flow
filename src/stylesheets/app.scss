@@ -161,7 +161,6 @@ $pink: #FF4677;
     width: 96%;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     &__heading{
-        /*margin-top: 15px;*/
         padding: 0 0.5em;
         margin-bottom: 1em;
         justify-content: space-between;
@@ -1565,7 +1564,11 @@ article{
         justify-content: center;
         display: flex;
         .c-employee {
+            &:hover {
+                background: #f5f5f5;
+            }
             height: 180px;
+            width: 200px;
             margin-bottom: 0;
         }
     }
@@ -1636,15 +1639,201 @@ article{
         }
     }
 
+.employee-projects {
+    height: 510px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .projects-status {
+        width: 28%;
+    }
+    .c-client-project {
+        width: 70%;
+    }
+    .projects-status {
+        max-height: 100%;
+        @extend %scroll;
+        overflow-y: scroll;
+        .item {
+            &.active {
+                border-left: 3px solid $pink;
+                background: #f5f5f5;
+            }
+            padding: 1em 2em;
+            position: relative;
+            &:not(:last-of-type)::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background: #eee;
+            }
+        }
+        .status {
+            &-progressing {
+                color: tomato;
+            }
+            &-done {
+                color: darkcyan;
+            }
+            text-transform: capitalize;
+            font-size: 0.95rem;
+            text-align: right;
+            margin-bottom: 4px;
+        }
+        .title {
+            margin: 4px 0;
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+}
 
+.c-resume {
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
 
+.clone {
+    text-align: right;
+    margin-bottom: 15px;
+    button {
+        &:first-letter {
+            text-transform: capitalize;
+        }
+        color: #fff;
+        background: transparent;
+        padding: 0 2em;
+        background: $purple;
+    }
+}
 
+.c-contacts {
+    position: relative;
+    padding: 0 20px;
+    &::after, &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: #eee;
+    }
+    &::after {
+        left: 0;
+    }
+    &::before {
+        right: 0;
+    }
+    p {
+        span:first-of-type {
+            text-align: center;
+            width: 25px;
+            margin-right: 8px;
+        }
+        &:first-letter {
+            text-transform: capitalize;
+        }
+        &:not(:last-of-type) {
+            margin-bottom: 16px;
+        }
+    }
+}
 
+.c-person {
+    width: fit-content;
+    &-picture {
+        margin-right: 16px;
+        img {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+        }
+    }
+    &-informations {
+        .title {
+            text-transform: capitalize;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
+        }
+        .function {
+            margin-bottom: 8px;
+            text-transform: capitalize;
+        }
+        .mission {
+            li:first-letter{
+                text-transform: capitalize;
+            }
+            line-height: 1.4em;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    }
+}
 
+.profile-details {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
 
+.extra {
+    padding: 1em 2em;
+    width: 68%;
+    .heading {
+        &:first-letter {
+            text-transform: capitalize;
+        }
+        color: $lavender;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0 0 12px;
+    }
+    .row {
+        display: flex;
+    }
+    .personal, .professional {
+        margin-bottom: 12px;
+        .field {
+            display: flex;
+            .title {
+                width: 150px;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+            p {
+                margin-bottom: 8px;
+            }
+        }
+    }
 
+    .rights, .options {
+        width: 100%;
+        font-size: 0.95rem;
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            .field {
+                input {
+                    margin-right: 10px;
+                }
+                width: 25%;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
 
-
+.profile-calendar {
+    width: 30%;
+    margin-bottom: 0;
+}
 
 
 
