@@ -32,13 +32,15 @@ body {
 ul {
   list-style: none; }
 
+a, button, input {
+  outline: none; }
+
 a {
   text-decoration: none;
   color: #111;
   text-transform: capitalize; }
 
 button, input {
-  outline: none;
   border: none; }
 
 /***** Dropdown *****/

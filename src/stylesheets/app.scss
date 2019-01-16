@@ -35,14 +35,19 @@ ul{
     list-style: none;
 }
 
+%outlineless {
+    outline: none;
+}
+
 a{
+    @extend %outlineless;
     text-decoration: none;
     color: #111;
     text-transform: capitalize;
 }
 
 button, input{
-    outline: none;
+    @extend %outlineless;
     border: none;
 }
 
@@ -1834,6 +1839,8 @@ article{
     width: 30%;
     margin-bottom: 0;
 }
+
+
 
 
 

@@ -1,0 +1,249 @@
+$family: unquote("Barlow");
+@import url("http://fonts.googleapis.com/css?family=#{$family}:400,500,700");
+
+// Reset
+
+html, body, ul, ol, p{
+  margin:  0;
+  padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+    position: relative;    
+}
+
+::placeholder{
+    text-transform: capitalize;
+}
+
+ul{
+    list-style: none;
+}
+
+%outlineless {
+    outline: none;
+}
+
+a{
+    @extend %outlineless;
+    text-decoration: none;
+    color: #111;
+    text-transform: capitalize;
+}
+
+button, input{
+    @extend %outlineless;
+    border: none;
+}
+
+
+.o-card {
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: 0 0 16px rgba (0, 0, 0, 0.2);
+}
+
+$purple: #5A01AB;
+$lavender: #AC3BFA;
+$pink: #FF4677;
+
+header {
+    padding: 1em 2em;
+    height: 100vh;
+}
+
+.logo {
+    width: 150px;
+}
+
+.wrap {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding: 0.5em;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    &__link {
+        color: $purple;
+        padding: 0.75em 1.5em;
+        border-radius: 25px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        &--super {
+            &:hover {
+                background: #f5f5f5;
+            }
+            border: 2px solid $purple;
+        }
+    }
+}
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100% - 60px);
+    &__content {
+        width: 60%;
+        .heading {
+            width: 70%;
+            text-transform: uppercase;
+        }
+        .description {
+            color: #535353;
+            line-height: 1.6em;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .actions {
+            display: flex;
+        }
+        .buy, .watch {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .buy {
+            margin-right: 32px;
+            background: $pink;
+            color: #fff;
+            padding: 0.75em 2em;
+            border-radius: 25px;
+            letter-spacing: 0.05em;
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+        }
+        .watch {
+            
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 8px;
+            }
+        }
+    }
+    &__image {
+        position: relative;
+        margin-top: 50px;
+        display: flex;
+        align-items: flex-end;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            background: linear-gradient(180deg, rgba(91, 3, 178, 0.9) 0%, rgba(117, 3, 244, 0.9) 100%);
+            border-radius: 50%;
+        }
+        &::before {
+            right: 0;
+            top: -50px;
+            width: 320px;
+            height: 320px;
+            z-index: -2;
+        }
+        &::after {
+            right: 20px;
+            top: -20px;
+            width: 200px;
+            height: 200px;
+            z-index: -1;
+        }
+        width: 35%;
+        .illustration {
+            width: 100%;
+        }
+    }
+}
+
+.section {
+    padding: 1em;
+    height: 100vh;
+    text-align: center;
+    &__title {
+        font-size: 1.25rem;
+        margin: 42px 0 8px;
+        text-transform: uppercase;
+    }
+    &__description {
+        color: #777;
+        width: 40%;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+}
+
+.services {
+    background: #f5f5f5;
+    .cards {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .card {
+        background: #fff;
+        width: 290px;
+        height: 350px;
+        padding: 2em;
+        &__image {
+            max-height: 150px;
+        }
+        &__title {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 500;
+            margin: 16px 0 8px;
+            font-size: 1.15rem;
+            &:first-letter{
+                text-transform: uppercase;
+            }
+        }
+        &__content {
+            font-weight: 400;
+            color: #777;
+        }
+    }
+}
+
+.supports {
+    background: #f5f5f5;
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 0 auto;
+    }
+    textarea, input {
+        padding: 1em;
+        border: 1px solid #d9d9d9;
+        margin-bottom: 20px;
+        font-family: 'Barlow', sans-serif;
+        &:placeholder {
+            font-family: 'Barlow', sans-serif;
+        }
+    }
+    textarea {
+        resize: none;
+        height: 200px;
+    }
+    .send {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: $purple;
+        color: #fff;
+        margin: 0 auto;
+        text-align: center;
+        svg {
+            stroke: #fff;
+            stroke-width: 2;
+            padding-left: 5px;
+            width: 25px;
+        }
+    }
+}
+
